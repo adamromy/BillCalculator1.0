@@ -1,4 +1,4 @@
-# BillCalculator1.0
+# BillCalculator1.0 (python jupyter notebook)
 
 ##Bill+Tip Calculator
 
