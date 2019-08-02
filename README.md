@@ -1,17 +1,20 @@
 # BillCalculator1.0
 
 ##Bill+Tip Calculator
+
 print('Welcome to BillCalc 1.0\n\n')
-#pre-defined variables
 num_people=0
 bill=0.00
 percent = 0
 accepted_percent = range(10,101)
+
 #get some input
+
 num_people =int(input('How many people are paying?:\t'))
 bill =float(input('How much is the bill?:\t$'))
 
-#minimal error mitigation
+#minimal error catch
+
 while percent not in accepted_percent:
     percent=float(input('How much do you intend to tip:\t%'))
     if percent in accepted_percent:
@@ -19,15 +22,18 @@ while percent not in accepted_percent:
     else:
         print('Whoops, are you sure thats possible?')
         
-#this takes the int(input()) and converts it to a usable percentage
+
 percent = percent/100
-#figures out the tip
 tip=bill*percent
+
 #rounds tip to nearest hundreth for readability
+
 tip = round(tip,2) 
 
 total=bill+tip
+
 #how much does each person pay?
+
 person_pays = total / num_people
 person_pays = round(person_pays,2)
 
